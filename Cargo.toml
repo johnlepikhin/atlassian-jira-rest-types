@@ -1,0 +1,16 @@
+[package]
+name = "atlassian-jira-rest-types"
+version = "0.1.0"
+edition = "2021"
+license-file = "LICENSE"
+description = "Atlassian's Jira REST API types"
+homepage = "https://github.com/johnlepikhin/atlassian-jira-rest-types"
+repository = "https://github.com/johnlepikhin/atlassian-jira-rest-types"
+readme = "README.md"
+keywords = ["jira", "atlassian", "api", "rest" ]
+
+[dependencies]
+schemafy = "0.6"
+schemafy_core = "0.6"
+serde = "1.0"
+serde_json = "1.0"
