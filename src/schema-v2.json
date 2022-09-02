@@ -59,11 +59,7 @@
         },
         "holder": {
           "description": "The user or group being granted the permission. It consists of a `type`, a type-dependent `parameter` and a type-dependent `value`. See [Holder object](../api-group-permission-schemes/#holder-object) in *Get all permission schemes* for more information.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/PermissionHolder"
-            }
-          ]
+          "$ref": "#/definitions/PermissionHolder"
         },
         "permission": {
           "type": "string",
@@ -133,11 +129,7 @@
         },
         "scope": {
           "description": "The scope of the permission scheme.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         },
         "permissions": {
           "type": "array",
@@ -190,20 +182,12 @@
         "avatarUrls": {
           "description": "The URLs of the project's avatars.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/AvatarUrlsBean"
-            }
-          ]
+          "$ref": "#/definitions/AvatarUrlsBean"
         },
         "projectCategory": {
           "description": "The category the project belongs to.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UpdatedProjectCategory"
-            }
-          ]
+          "$ref": "#/definitions/UpdatedProjectCategory"
         }
       },
       "additionalProperties": false,
@@ -224,11 +208,7 @@
         "project": {
           "description": "The project the item has scope in.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/ProjectDetails"
-            }
-          ]
+          "$ref": "#/definitions/ProjectDetails"
         }
       },
       "additionalProperties": true,
@@ -587,11 +567,7 @@
       "properties": {
         "jql": {
           "description": "The JQL query that specifies the set of issues available in the Jira expression.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JexpJqlIssues"
-            }
-          ]
+          "$ref": "#/definitions/JexpJqlIssues"
         }
       },
       "additionalProperties": false,
@@ -633,27 +609,15 @@
       "properties": {
         "issue": {
           "description": "The issue that is available under the `issue` variable when evaluating the expression.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/IdOrKeyBean"
-            }
-          ]
+          "$ref": "#/definitions/IdOrKeyBean"
         },
         "issues": {
           "description": "The collection of issues that is available under the `issues` variable when evaluating the expression.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JexpIssues"
-            }
-          ]
+          "$ref": "#/definitions/JexpIssues"
         },
         "project": {
           "description": "The project that is available under the `project` variable when evaluating the expression.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/IdOrKeyBean"
-            }
-          ]
+          "$ref": "#/definitions/IdOrKeyBean"
         },
         "sprint": {
           "type": "integer",
@@ -698,11 +662,7 @@
         },
         "context": {
           "description": "The context in which the Jira expression is evaluated.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JiraExpressionEvalContextBean"
-            }
-          ]
+          "$ref": "#/definitions/JiraExpressionEvalContextBean"
         }
       },
       "additionalProperties": false
@@ -797,19 +757,11 @@
       "properties": {
         "complexity": {
           "description": "Contains information about the expression complexity. For example, the number of steps it took to evaluate the expression.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JiraExpressionsComplexityBean"
-            }
-          ]
+          "$ref": "#/definitions/JiraExpressionsComplexityBean"
         },
         "issues": {
           "description": "Contains information about the `issues` variable in the context. For example, is the issues were loaded with JQL, information about the page will be included here.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/IssuesMetaBean"
-            }
-          ]
+          "$ref": "#/definitions/IssuesMetaBean"
         }
       },
       "additionalProperties": false
@@ -825,11 +777,7 @@
         },
         "meta": {
           "description": "Contains various characteristics of the performed expression evaluation.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JiraExpressionEvaluationMetaDataBean"
-            }
-          ]
+          "$ref": "#/definitions/JiraExpressionEvaluationMetaDataBean"
         }
       },
       "additionalProperties": false,
@@ -846,35 +794,19 @@
       "properties": {
         "steps": {
           "description": "The number of steps it took to evaluate the expression, where a step is a high-level operation performed by the expression. A step is an operation such as arithmetic, accessing a property, accessing a context variable, or calling a function.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JiraExpressionsComplexityValueBean"
-            }
-          ]
+          "$ref": "#/definitions/JiraExpressionsComplexityValueBean"
         },
         "expensiveOperations": {
           "description": "The number of expensive operations executed while evaluating the expression. Expensive operations are those that load additional data, such as entity properties, comments, or custom fields.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JiraExpressionsComplexityValueBean"
-            }
-          ]
+          "$ref": "#/definitions/JiraExpressionsComplexityValueBean"
         },
         "beans": {
           "description": "The number of Jira REST API beans returned in the response.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JiraExpressionsComplexityValueBean"
-            }
-          ]
+          "$ref": "#/definitions/JiraExpressionsComplexityValueBean"
         },
         "primitiveValues": {
           "description": "The number of primitive values returned in the response.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JiraExpressionsComplexityValueBean"
-            }
-          ]
+          "$ref": "#/definitions/JiraExpressionsComplexityValueBean"
         }
       },
       "additionalProperties": false
@@ -1152,11 +1084,7 @@
         "owner": {
           "description": "The owner of the dashboard.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserBean"
-            }
-          ]
+          "$ref": "#/definitions/UserBean"
         },
         "popularity": {
           "type": "integer",
@@ -1316,11 +1244,7 @@
         "scope": {
           "description": "Details of the next-gen projects the issue type is available in.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         }
       },
       "additionalProperties": false,
@@ -1411,11 +1335,7 @@
         "lead": {
           "description": "The username of the project lead.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "components": {
           "type": "array",
@@ -1477,20 +1397,12 @@
         "avatarUrls": {
           "description": "The URLs of the project's avatars.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/AvatarUrlsBean"
-            }
-          ]
+          "$ref": "#/definitions/AvatarUrlsBean"
         },
         "projectCategory": {
           "description": "The category the project belongs to.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/ProjectCategory"
-            }
-          ]
+          "$ref": "#/definitions/ProjectCategory"
         },
         "projectTypeKey": {
           "type": "string",
@@ -1528,20 +1440,12 @@
         "issueTypeHierarchy": {
           "description": "The issue type hierarchy for the project.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/Hierarchy"
-            }
-          ]
+          "$ref": "#/definitions/Hierarchy"
         },
         "permissions": {
           "description": "User permissions on the project",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/ProjectPermissions"
-            }
-          ]
+          "$ref": "#/definitions/ProjectPermissions"
         },
         "properties": {
           "type": "object",
@@ -1560,11 +1464,7 @@
         "insight": {
           "description": "Insights about the project.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/ProjectInsight"
-            }
-          ]
+          "$ref": "#/definitions/ProjectInsight"
         },
         "deleted": {
           "type": "boolean",
@@ -1586,11 +1486,7 @@
         "deletedBy": {
           "description": "The user who marked the project as deleted.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "archived": {
           "type": "boolean",
@@ -1606,20 +1502,12 @@
         "archivedBy": {
           "description": "The user who archived the project.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "landingPageInfo": {
           "description": "The project landing page info.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/ProjectLandingPageInfo"
-            }
-          ]
+          "$ref": "#/definitions/ProjectLandingPageInfo"
         }
       },
       "additionalProperties": false,
@@ -1679,11 +1567,7 @@
         "lead": {
           "description": "The user details for the component's lead user.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "leadUserName": {
           "type": "string",
@@ -1708,11 +1592,7 @@
         "assignee": {
           "description": "The details of the user associated with `assigneeType`, if any. See `realAssignee` for details of the user assigned to issues created with this component.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "realAssigneeType": {
           "type": "string",
@@ -1728,11 +1608,7 @@
         "realAssignee": {
           "description": "The user assigned to issues created with this component, when `assigneeType` does not identify a valid assignee.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "isAssigneeTypeValid": {
           "type": "boolean",
@@ -1866,11 +1742,7 @@
         "scope": {
           "description": "The scope of the role. Indicated for roles associated with [next-gen projects](https://confluence.atlassian.com/x/loMyO).",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         },
         "translatedName": {
           "type": "string",
@@ -1967,19 +1839,11 @@
         },
         "actorUser": {
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/ProjectRoleUser"
-            }
-          ]
+          "$ref": "#/definitions/ProjectRoleUser"
         },
         "actorGroup": {
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/ProjectRoleGroup"
-            }
-          ]
+          "$ref": "#/definitions/ProjectRoleGroup"
         }
       },
       "additionalProperties": false,
@@ -2031,35 +1895,19 @@
         },
         "project": {
           "description": "The project that the filter is shared with. This is similar to the project object returned by [Get project](#api-rest-api-2-project-projectIdOrKey-get) but it contains a subset of the properties, which are: `self`, `id`, `key`, `assigneeType`, `name`, `roles`, `avatarUrls`, `projectType`, `simplified`.  \nFor a request, specify the `id` for the project.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Project"
-            }
-          ]
+          "$ref": "#/definitions/Project"
         },
         "role": {
           "description": "The project role that the filter is shared with.  \nFor a request, specify the `id` for the role. You must also specify the `project` object and `id` for the project that the role is in.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ProjectRole"
-            }
-          ]
+          "$ref": "#/definitions/ProjectRole"
         },
         "group": {
           "description": "The group that the filter is shared with. For a request, specify the `groupId` or `name` property for the group. As a group's name can change, use of `groupId` is recommended.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/GroupName"
-            }
-          ]
+          "$ref": "#/definitions/GroupName"
         },
         "user": {
           "description": "The user account ID that the filter is shared with. For a request, specify the `accountId` property for the user.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserBean"
-            }
-          ]
+          "$ref": "#/definitions/UserBean"
         }
       },
       "additionalProperties": false,
@@ -2281,11 +2129,7 @@
         "avatarUrls": {
           "description": "The avatars of the user.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/AvatarUrlsBean"
-            }
-          ]
+          "$ref": "#/definitions/AvatarUrlsBean"
         },
         "displayName": {
           "type": "string",
@@ -2310,20 +2154,12 @@
         "groups": {
           "description": "The groups that the user belongs to.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/SimpleListWrapperGroupName"
-            }
-          ]
+          "$ref": "#/definitions/SimpleListWrapperGroupName"
         },
         "applicationRoles": {
           "description": "The application roles the user is assigned to.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/SimpleListWrapperApplicationRole"
-            }
-          ]
+          "$ref": "#/definitions/SimpleListWrapperApplicationRole"
         },
         "expand": {
           "type": "string",
@@ -2371,11 +2207,7 @@
         },
         "avatarUrls": {
           "description": "The avatars of the user.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserBeanAvatarUrls"
-            }
-          ]
+          "$ref": "#/definitions/UserBeanAvatarUrls"
         }
       },
       "additionalProperties": false
@@ -2493,11 +2325,7 @@
         "issuesStatusForFixVersion": {
           "description": "If the expand option `issuesstatus` is used, returns the count of issues in this version for each of the status categories *to do*, *in progress*, *done*, and *unmapped*. The *unmapped* property contains a count of issues with a status other than *to do*, *in progress*, and *done*.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/VersionIssuesStatus"
-            }
-          ]
+          "$ref": "#/definitions/VersionIssuesStatus"
         }
       },
       "additionalProperties": false,
@@ -2761,11 +2589,7 @@
         "position": {
           "description": "The position of the gadget.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/DashboardGadgetPosition"
-            }
-          ]
+          "$ref": "#/definitions/DashboardGadgetPosition"
         },
         "title": {
           "type": "string",
@@ -2834,11 +2658,7 @@
         },
         "position": {
           "description": "The position of the gadget. When the gadget is placed into the position, other gadgets in the same column are moved down to accommodate it.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/DashboardGadgetPosition"
-            }
-          ]
+          "$ref": "#/definitions/DashboardGadgetPosition"
         },
         "title": {
           "type": "string",
@@ -2869,11 +2689,7 @@
         },
         "position": {
           "description": "The position of the gadget.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/DashboardGadgetPosition"
-            }
-          ]
+          "$ref": "#/definitions/DashboardGadgetPosition"
         }
       },
       "additionalProperties": false,
@@ -3048,11 +2864,7 @@
         "author": {
           "description": "The user who made the change.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserDetails"
-            }
-          ]
+          "$ref": "#/definitions/UserDetails"
         },
         "created": {
           "type": "string",
@@ -3071,11 +2883,7 @@
         "historyMetadata": {
           "description": "The history metadata associated with the changed.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/HistoryMetadata"
-            }
-          ]
+          "$ref": "#/definitions/HistoryMetadata"
         }
       },
       "additionalProperties": false,
@@ -3099,11 +2907,7 @@
         "schema": {
           "description": "The data type of the field.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/JsonTypeBean"
-            }
-          ]
+          "$ref": "#/definitions/JsonTypeBean"
         },
         "name": {
           "type": "string",
@@ -3194,27 +2998,15 @@
         },
         "actor": {
           "description": "Details of the user whose action created the history record.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/HistoryMetadataParticipant"
-            }
-          ]
+          "$ref": "#/definitions/HistoryMetadataParticipant"
         },
         "generator": {
           "description": "Details of the system that generated the history record.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/HistoryMetadataParticipant"
-            }
-          ]
+          "$ref": "#/definitions/HistoryMetadataParticipant"
         },
         "cause": {
           "description": "Details of the cause that triggered the creation the history record.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/HistoryMetadataParticipant"
-            }
-          ]
+          "$ref": "#/definitions/HistoryMetadataParticipant"
         },
         "extraData": {
           "type": "object",
@@ -3356,29 +3148,17 @@
         "operations": {
           "description": "The operations that can be performed on the issue.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/Operations"
-            }
-          ]
+          "$ref": "#/definitions/Operations"
         },
         "editmeta": {
           "description": "The metadata for the fields on the issue that can be amended.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/IssueUpdateMetadata"
-            }
-          ]
+          "$ref": "#/definitions/IssueUpdateMetadata"
         },
         "changelog": {
           "description": "Details of changelogs associated with the issue.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/PageOfChangelogs"
-            }
-          ]
+          "$ref": "#/definitions/PageOfChangelogs"
         },
         "versionedRepresentations": {
           "type": "object",
@@ -3397,10 +3177,17 @@
         },
         "fields": {
           "type": "object",
-          "additionalProperties": {}
+          "additionalProperties": true,
+          "properties": {}
         }
       },
       "additionalProperties": false,
+      "required": [
+        "id",
+        "key",
+        "self",
+        "fields"
+      ],
       "description": "Details about an issue.",
       "xml": {
         "name": "issue"
@@ -3421,11 +3208,7 @@
         "to": {
           "description": "Details of the issue status after the transition.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/StatusDetails"
-            }
-          ]
+          "$ref": "#/definitions/StatusDetails"
         },
         "hasScreen": {
           "type": "boolean",
@@ -3739,11 +3522,7 @@
         "statusCategory": {
           "description": "The category assigned to the status.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/StatusCategory"
-            }
-          ]
+          "$ref": "#/definitions/StatusCategory"
         }
       },
       "additionalProperties": true,
@@ -3780,11 +3559,7 @@
         "avatarUrls": {
           "description": "The avatars of the user.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/AvatarUrlsBean"
-            }
-          ]
+          "$ref": "#/definitions/AvatarUrlsBean"
         },
         "displayName": {
           "type": "string",
@@ -4121,11 +3896,7 @@
         "owner": {
           "description": "The user who owns the filter. This is defaulted to the creator of the filter, however Jira administrators can change the owner of a shared filter in the admin settings.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "jql": {
           "type": "string",
@@ -4170,20 +3941,12 @@
         "sharedUsers": {
           "description": "A paginated list of the users that the filter is shared with. This includes users that are members of the groups or can browse the projects that the filter is shared with.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserList"
-            }
-          ]
+          "$ref": "#/definitions/UserList"
         },
         "subscriptions": {
           "description": "A paginated list of the users that are subscribed to the filter.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/FilterSubscriptionsList"
-            }
-          ]
+          "$ref": "#/definitions/FilterSubscriptionsList"
         }
       },
       "additionalProperties": false,
@@ -4204,20 +3967,12 @@
         "user": {
           "description": "The user subscribing to filter.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "group": {
           "description": "The group subscribing to filter.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/GroupName"
-            }
-          ]
+          "$ref": "#/definitions/GroupName"
         }
       },
       "additionalProperties": false,
@@ -4367,11 +4122,7 @@
         "owner": {
           "description": "The user who owns the filter. Defaults to the creator of the filter, however, Jira administrators can change the owner of a shared filter in the admin settings.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "jql": {
           "type": "string",
@@ -5249,11 +5000,7 @@
         },
         "scope": {
           "description": "The scope of the screen.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         }
       },
       "additionalProperties": false,
@@ -5664,11 +5411,7 @@
         },
         "lead": {
           "description": "The user details for the component's lead user.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "assigneeType": {
           "type": "string",
@@ -5689,11 +5432,7 @@
         },
         "assignee": {
           "description": "The details of the user associated with `assigneeType`, if any. See `realAssignee` for details of the user assigned to issues created with this component.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "projectId": {
           "type": "integer",
@@ -5703,11 +5442,7 @@
         },
         "realAssignee": {
           "description": "The user assigned to issues created with this component, when `assigneeType` does not identify a valid assignee.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "isAssigneeTypeValid": {
           "type": "boolean",
@@ -6274,11 +6009,7 @@
         "author": {
           "description": "The ID of the user who created the comment.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserDetails"
-            }
-          ]
+          "$ref": "#/definitions/UserDetails"
         },
         "body": {
           "type": "string",
@@ -6292,11 +6023,7 @@
         "updateAuthor": {
           "description": "The ID of the user who updated the comment last.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserDetails"
-            }
-          ]
+          "$ref": "#/definitions/UserDetails"
         },
         "created": {
           "type": "string",
@@ -6312,11 +6039,7 @@
         },
         "visibility": {
           "description": "The group or role to which this comment is visible. Optional on create and update.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Visibility"
-            }
-          ]
+          "$ref": "#/definitions/Visibility"
         },
         "jsdPublic": {
           "type": "boolean",
@@ -6336,6 +6059,13 @@
           }
         }
       },
+      "required": [
+        "self",
+        "id",
+        "author",
+        "created",
+        "body"
+      ],
       "additionalProperties": true,
       "description": "A comment."
     },
@@ -6350,38 +6080,22 @@
         "status": {
           "description": "The status of the linked issue.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/StatusDetails"
-            }
-          ]
+          "$ref": "#/definitions/StatusDetails"
         },
         "priority": {
           "description": "The priority of the linked issue.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/Priority"
-            }
-          ]
+          "$ref": "#/definitions/Priority"
         },
         "assignee": {
           "description": "The assignee of the linked issue.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserDetails"
-            }
-          ]
+          "$ref": "#/definitions/UserDetails"
         },
         "timetracking": {
           "description": "The time tracking of the linked issue.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/TimeTrackingDetails"
-            }
-          ]
+          "$ref": "#/definitions/TimeTrackingDetails"
         },
         "issuetype": {
           "description": "The type of the linked issue.",
@@ -6390,11 +6104,7 @@
         "issueType": {
           "description": "The type of the linked issue.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/IssueTypeDetails"
-            }
-          ]
+          "$ref": "#/definitions/IssueTypeDetails"
         }
       },
       "additionalProperties": false,
@@ -6472,11 +6182,7 @@
         "fields": {
           "description": "The fields associated with the issue.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/Fields"
-            }
-          ]
+          "$ref": "#/definitions/Fields"
         }
       },
       "additionalProperties": false,
@@ -6565,8 +6271,6 @@
     },
     "IssueLink": {
       "required": [
-        "inwardIssue",
-        "outwardIssue",
         "type"
       ],
       "type": "object",
@@ -6584,27 +6288,15 @@
         },
         "type": {
           "description": "The type of link between the issues.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/IssueLinkType"
-            }
-          ]
+          "$ref": "#/definitions/IssueLinkType"
         },
         "inwardIssue": {
           "description": "Provides details about the linked issue. If presenting this link in a user interface, use the `inward` field of the issue link type to label the link.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/LinkedIssue"
-            }
-          ]
+          "$ref": "#/definitions/LinkedIssue"
         },
         "outwardIssue": {
           "description": "Provides details about the linked issue. If presenting this link in a user interface, use the `outward` field of the issue link type to label the link.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/LinkedIssue"
-            }
-          ]
+          "$ref": "#/definitions/LinkedIssue"
         }
       },
       "additionalProperties": false,
@@ -6658,20 +6350,12 @@
         "author": {
           "description": "Details of the user who created the worklog.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserDetails"
-            }
-          ]
+          "$ref": "#/definitions/UserDetails"
         },
         "updateAuthor": {
           "description": "Details of the user who last updated the worklog.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserDetails"
-            }
-          ]
+          "$ref": "#/definitions/UserDetails"
         },
         "comment": {
           "type": "string",
@@ -6691,11 +6375,7 @@
         },
         "visibility": {
           "description": "Details about any restrictions in the visibility of the worklog. Optional when creating or updating a worklog.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Visibility"
-            }
-          ]
+          "$ref": "#/definitions/Visibility"
         },
         "started": {
           "type": "string",
@@ -6819,11 +6499,7 @@
         },
         "holder": {
           "description": "The user or group being granted the permission. It consists of a `type` and a type-dependent `parameter`. See [Holder object](../api-group-permission-schemes/#holder-object) in *Get all permission schemes* for more information.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/PermissionHolder"
-            }
-          ]
+          "$ref": "#/definitions/PermissionHolder"
         }
       },
       "additionalProperties": false,
@@ -7033,11 +6709,7 @@
       "properties": {
         "transition": {
           "description": "Details of a transition. Required when performing a transition, optional when creating or editing an issue.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/IssueTransition"
-            }
-          ]
+          "$ref": "#/definitions/IssueTransition"
         },
         "fields": {
           "type": "object",
@@ -7056,11 +6728,7 @@
         },
         "historyMetadata": {
           "description": "Additional issue history details.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/HistoryMetadata"
-            }
-          ]
+          "$ref": "#/definitions/HistoryMetadata"
         },
         "properties": {
           "type": "array",
@@ -7193,11 +6861,7 @@
         "transition": {
           "description": "The response code and messages related to any requested transition.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/NestedResponse"
-            }
-          ]
+          "$ref": "#/definitions/NestedResponse"
         }
       },
       "additionalProperties": false,
@@ -7345,11 +7009,7 @@
         "scope": {
           "description": "Details of the next-gen projects the issue type is available in.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         },
         "expand": {
           "type": "string",
@@ -7405,11 +7065,7 @@
         "avatarUrls": {
           "description": "List of the project's avatars, returning the avatar size and associated URL.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/AvatarUrlsBean"
-            }
-          ]
+          "$ref": "#/definitions/AvatarUrlsBean"
         },
         "issuetypes": {
           "type": "array",
@@ -7479,11 +7135,7 @@
         },
         "application": {
           "description": "Details of the remote application the linked item is in.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Application"
-            }
-          ]
+          "$ref": "#/definitions/Application"
         },
         "relationship": {
           "type": "string",
@@ -7491,11 +7143,7 @@
         },
         "object": {
           "description": "Details of the item linked to.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/RemoteObject"
-            }
-          ]
+          "$ref": "#/definitions/RemoteObject"
         }
       },
       "additionalProperties": false,
@@ -7522,19 +7170,11 @@
         },
         "icon": {
           "description": "Details of the icon for the item. If no icon is defined, the default link icon is used in Jira.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Icon"
-            }
-          ]
+          "$ref": "#/definitions/Icon"
         },
         "status": {
           "description": "The status of the item.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Status"
-            }
-          ]
+          "$ref": "#/definitions/Status"
         }
       },
       "additionalProperties": true,
@@ -7549,11 +7189,7 @@
         },
         "icon": {
           "description": "Details of the icon representing the status. If not provided, no status icon displays in Jira.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Icon"
-            }
-          ]
+          "$ref": "#/definitions/Icon"
         }
       },
       "additionalProperties": true,
@@ -7590,11 +7226,7 @@
         },
         "application": {
           "description": "Details of the remote application the linked item is in. For example, trello.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Application"
-            }
-          ]
+          "$ref": "#/definitions/Application"
         },
         "relationship": {
           "type": "string",
@@ -7602,11 +7234,7 @@
         },
         "object": {
           "description": "Details of the item linked to.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/RemoteObject"
-            }
-          ]
+          "$ref": "#/definitions/RemoteObject"
         }
       },
       "additionalProperties": true,
@@ -7653,19 +7281,11 @@
         },
         "to": {
           "description": "The recipients of the email notification for the issue.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/NotificationRecipients"
-            }
-          ]
+          "$ref": "#/definitions/NotificationRecipients"
         },
         "restrict": {
           "description": "Restricts the notifications to users with the specified permissions.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/NotificationRecipientsRestrictions"
-            }
-          ]
+          "$ref": "#/definitions/NotificationRecipientsRestrictions"
         }
       },
       "additionalProperties": true,
@@ -7810,6 +7430,12 @@
         }
       },
       "additionalProperties": true,
+      "required": [
+        "startAt",
+        "maxResults",
+        "total",
+        "comments"
+      ],
       "description": "A page of comments."
     },
     "PaginatedResponseComment": {
@@ -7994,11 +7620,7 @@
         "author": {
           "description": "Details of the user who added the attachment.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserDetails"
-            }
-          ]
+          "$ref": "#/definitions/UserDetails"
         },
         "created": {
           "type": "string",
@@ -8052,11 +7674,7 @@
         "users": {
           "description": "A paginated list of the users that are members of the group. A maximum of 50 users is returned in the list, to access additional users append `[start-index:end-index]` to the expand request. For example, to access the next 50 users, use`?expand=users[51:100]`.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/PagedListUserDetailsApplicationUser"
-            }
-          ]
+          "$ref": "#/definitions/PagedListUserDetailsApplicationUser"
         },
         "expand": {
           "type": "string",
@@ -8335,19 +7953,11 @@
         },
         "scope": {
           "description": "The scope of the field.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         },
         "schema": {
           "description": "The data schema for the field.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JsonTypeBean"
-            }
-          ]
+          "$ref": "#/definitions/JsonTypeBean"
         }
       },
       "additionalProperties": false,
@@ -8503,19 +8113,11 @@
         },
         "scope": {
           "description": "The scope of the screen.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         },
         "tab": {
           "description": "The tab for the screen.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ScreenableTab"
-            }
-          ]
+          "$ref": "#/definitions/ScreenableTab"
         }
       },
       "additionalProperties": false,
@@ -8537,11 +8139,7 @@
         },
         "scope": {
           "description": "The scope of the context.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         }
       },
       "additionalProperties": false,
@@ -10279,11 +9877,7 @@
         "author": {
           "description": "Details of the user who attached the file.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "created": {
           "type": "string",
@@ -10707,19 +10301,11 @@
         },
         "screens": {
           "description": "The IDs of the screens for the screen types of the screen scheme.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ScreenTypes"
-            }
-          ]
+          "$ref": "#/definitions/ScreenTypes"
         },
         "issueTypeScreenSchemes": {
           "description": "Details of the issue type screen schemes associated with the screen scheme.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/PageBeanIssueTypeScreenScheme"
-            }
-          ]
+          "$ref": "#/definitions/PageBeanIssueTypeScreenScheme"
         }
       },
       "additionalProperties": false,
@@ -10775,11 +10361,7 @@
         },
         "screens": {
           "description": "The IDs of the screens for the screen types of the screen scheme. Only screens used in classic projects are accepted.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ScreenTypes"
-            }
-          ]
+          "$ref": "#/definitions/ScreenTypes"
         }
       },
       "additionalProperties": false,
@@ -10816,11 +10398,7 @@
         },
         "screens": {
           "description": "The IDs of the screens for the screen types of the screen scheme. Only screens used in classic projects are accepted.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/UpdateScreenTypes"
-            }
-          ]
+          "$ref": "#/definitions/UpdateScreenTypes"
         }
       },
       "additionalProperties": false,
@@ -10937,11 +10515,7 @@
       "properties": {
         "issueTypeScreenScheme": {
           "description": "Details of an issue type screen scheme.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/IssueTypeScreenScheme"
-            }
-          ]
+          "$ref": "#/definitions/IssueTypeScreenScheme"
         },
         "projectIds": {
           "type": "array",
@@ -11452,11 +11026,7 @@
       "properties": {
         "scope": {
           "description": "Defines the projects that the option is available in. If the scope is not defined, then the option is available in all projects.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/IssueFieldOptionScopeBean"
-            }
-          ]
+          "$ref": "#/definitions/IssueFieldOptionScopeBean"
         },
         "attributes": {
           "uniqueItems": true,
@@ -11496,11 +11066,7 @@
         },
         "global": {
           "description": "Defines the behavior of the option within the global context. If this property is set, even if set to an empty object, then the option is available in all projects.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/GlobalScopeBean"
-            }
-          ]
+          "$ref": "#/definitions/GlobalScopeBean"
         }
       },
       "additionalProperties": false
@@ -11620,11 +11186,7 @@
         },
         "errors": {
           "description": "A collection of errors related to unchanged issues. The collection size is limited, which means not all errors may be returned.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/SimpleErrorCollection"
-            }
-          ]
+          "$ref": "#/definitions/SimpleErrorCollection"
         }
       },
       "additionalProperties": false
@@ -11698,11 +11260,7 @@
         },
         "result": {
           "description": "The result of the task execution.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/RemoveOptionFromIssuesResult"
-            }
-          ]
+          "$ref": "#/definitions/RemoveOptionFromIssuesResult"
         },
         "submittedBy": {
           "type": "integer",
@@ -12477,11 +12035,7 @@
       "properties": {
         "issueTypeScheme": {
           "description": "Details of an issue type scheme.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/IssueTypeScheme"
-            }
-          ]
+          "$ref": "#/definitions/IssueTypeScheme"
         },
         "projectIds": {
           "type": "array",
@@ -12864,11 +12418,7 @@
         "scope": {
           "description": "The scope of the role. Indicated for roles associated with [next-gen projects](https://confluence.atlassian.com/x/loMyO).",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         },
         "roleConfigurable": {
           "type": "boolean",
@@ -13063,19 +12613,11 @@
         },
         "group": {
           "description": "The specified group.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/GroupName"
-            }
-          ]
+          "$ref": "#/definitions/GroupName"
         },
         "field": {
           "description": "The custom user or group field.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/FieldDetails"
-            }
-          ]
+          "$ref": "#/definitions/FieldDetails"
         },
         "emailAddress": {
           "type": "string",
@@ -13083,19 +12625,11 @@
         },
         "projectRole": {
           "description": "The specified project role.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ProjectRole"
-            }
-          ]
+          "$ref": "#/definitions/ProjectRole"
         },
         "user": {
           "description": "The specified user.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/UserDetails"
-            }
-          ]
+          "$ref": "#/definitions/UserDetails"
         }
       },
       "additionalProperties": false,
@@ -13119,11 +12653,7 @@
         },
         "templateEvent": {
           "description": "The template of the event. Only custom events configured by Jira administrators have template.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/NotificationEvent"
-            }
-          ]
+          "$ref": "#/definitions/NotificationEvent"
         }
       },
       "additionalProperties": false,
@@ -13161,11 +12691,7 @@
         },
         "scope": {
           "description": "The scope of the notification scheme.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         }
       },
       "additionalProperties": false,
@@ -13249,11 +12775,7 @@
         },
         "filter": {
           "description": "The bulk operation filter.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/IssueFilterForBulkPropertySet"
-            }
-          ]
+          "$ref": "#/definitions/IssueFilterForBulkPropertySet"
         }
       },
       "additionalProperties": false,
@@ -13699,11 +13221,7 @@
         "timeTrackingConfiguration": {
           "description": "The configuration of time tracking.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/TimeTrackingConfiguration"
-            }
-          ]
+          "$ref": "#/definitions/TimeTrackingConfiguration"
         }
       },
       "additionalProperties": false,
@@ -13971,11 +13489,7 @@
         "lastModifiedUser": {
           "description": "The user that last modified the draft workflow scheme. A modification is a change to the issue type-project mappings only. This property does not apply to non-draft workflows.",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/User"
-            }
-          ]
+          "$ref": "#/definitions/User"
         },
         "lastModified": {
           "type": "string",
@@ -14138,11 +13652,7 @@
         },
         "workflowScheme": {
           "description": "The workflow scheme.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/WorkflowScheme"
-            }
-          ]
+          "$ref": "#/definitions/WorkflowScheme"
         }
       },
       "additionalProperties": false,
@@ -14433,11 +13943,7 @@
         "scope": {
           "description": "The scope where this workflow applies",
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/Scope"
-            }
-          ]
+          "$ref": "#/definitions/Scope"
         },
         "default": {
           "type": "boolean"
@@ -14575,19 +14081,11 @@
         },
         "rules": {
           "description": "The rules of the transition.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/CreateWorkflowTransitionRulesDetails"
-            }
-          ]
+          "$ref": "#/definitions/CreateWorkflowTransitionRulesDetails"
         },
         "screen": {
           "description": "The screen of the transition.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/CreateWorkflowTransitionScreenDetails"
-            }
-          ]
+          "$ref": "#/definitions/CreateWorkflowTransitionScreenDetails"
         },
         "properties": {
           "type": "object",
@@ -14627,11 +14125,7 @@
       "properties": {
         "conditions": {
           "description": "The workflow conditions.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/CreateWorkflowCondition"
-            }
-          ]
+          "$ref": "#/definitions/CreateWorkflowCondition"
         },
         "validators": {
           "type": "array",
@@ -15120,11 +14614,7 @@
         },
         "transition": {
           "readOnly": true,
-          "allOf": [
-            {
-              "$ref": "#/definitions/WorkflowTransition"
-            }
-          ]
+          "$ref": "#/definitions/WorkflowTransition"
         }
       },
       "additionalProperties": false,
@@ -15916,11 +15406,7 @@
         },
         "errors": {
           "description": "The list of errors.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ErrorCollection"
-            }
-          ]
+          "$ref": "#/definitions/ErrorCollection"
         },
         "accountId": {
           "maxLength": 128,
@@ -16349,11 +15835,7 @@
         },
         "structure": {
           "description": "The syntax tree of the query. Empty if the query was invalid.",
-          "allOf": [
-            {
-              "$ref": "#/definitions/JqlQuery"
-            }
-          ]
+          "$ref": "#/definitions/JqlQuery"
         },
         "errors": {
           "uniqueItems": true,
